@@ -11,6 +11,9 @@ import android.widget.ImageView;
 public class MainActivity extends Activity implements View.OnClickListener {
     private ImageView gambarSatu;
     private ImageView gambarDua;
+    private String satuBio = "Ditemukan Kartu Tanda Mahasiswa dengan nama yang sesuai pada kartu pengenelanya" +
+            "serta NRP sebagai berikut, ditemukan di perpustakaan";
+    private String duaBio = "Ditemukan KTM di perpustakan dengan nama yang sesuai pada kartu pengenalnya di kantin pusat";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,14 +53,20 @@ public class MainActivity extends Activity implements View.OnClickListener {
         switch (v.getId()){
             case R.id.gambarSatu:
                 Intent satuIntent = new Intent(MainActivity.this, DetailsActivity.class);
-                satuIntent.putExtra("satu","gambar penemuan pertama");
+                satuIntent.putExtra("satu",satuBio);
+                satuIntent.putExtra("name","barang penemuan");
+
+
                 startActivity(satuIntent);
 
                 break;
 
             case R.id.gambarDua:
                 Intent duaIntent = new Intent(MainActivity.this, DetailsActivity.class);
-                duaIntent.putExtra("dua", "gambar penemuan kedua");
+
+                duaIntent.putExtra("dua", duaBio);
+                duaIntent.putExtra("name","barang penemuan");
+
                 startActivity(duaIntent);
 
                 break;

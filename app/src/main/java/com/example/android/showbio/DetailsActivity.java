@@ -4,18 +4,42 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class DetailsActivity extends AppCompatActivity {
+    private ImageView profileImage;
+    private TextView textBio;
+    private Bundle extras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail_activity);
-        Bundle extras = getIntent().getExtras();
+        profileImage = (ImageView)findViewById(R.id.detailImage);
+        textBio = (TextView)findViewById(R.id.detailTextView);
+
+        extras = getIntent().getExtras();
         if (extras != null){
-            String myData = extras.getString("satu");
-            Toast.makeText(this,myData, Toast.LENGTH_LONG).show();
+            String name = extras.getString("name");
+
+
+
+            showDetails(name);
+
+
+        }
+    }
+    public void showDetails(String nName){
+        Toast.makeText(this, nName, Toast.LENGTH_LONG).show();
+
+        if (nName.equals("satu")){
+            profileImage.setImageDrawable(getResources().getDrawable(R.drawable.satu));
+            textBio.setText(extras.getString("satu"));
+        }else if (nName=="dua"){
+            profileImage.setImageResource(R.drawable.dua);
+            textBio.setText(extras.getString("dua"));
         }
     }
 
