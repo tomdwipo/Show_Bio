@@ -37,7 +37,7 @@ public class DetailsActivity extends AppCompatActivity {
         if (nName.equals("barang penemuan")){
             profileImage.setImageDrawable(getResources().getDrawable(R.drawable.satu));
             textBio.setText(extras.getString("s"));
-
+//
         }else if (nName.equals("barang penemuan")){
 
             profileImage.setImageDrawable(getResources().getDrawable(R.drawable.dua));
