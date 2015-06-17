@@ -34,11 +34,11 @@ public class DetailsActivity extends AppCompatActivity {
     public void showDetails(String nName){
        Toast.makeText(this, nName, Toast.LENGTH_LONG).show();
 
-        if (nName.equals("barang penemuan")){
+        if (nName.equals("barang penemuan 1")){
             profileImage.setImageDrawable(getResources().getDrawable(R.drawable.satu));
             textBio.setText(extras.getString("s"));
 //
-        }else if (nName.equals("barang penemuan")){
+        }else if (nName.equals("barang penemuan 2")){
 
             profileImage.setImageDrawable(getResources().getDrawable(R.drawable.dua));
             textBio.setText(extras.getString("dua"));

@@ -54,7 +54,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.gambarSatu:
                 Intent satuIntent = new Intent(MainActivity.this, DetailsActivity.class);
                 satuIntent.putExtra("s",satuBio);
-                satuIntent.putExtra("name","barang penemuan");
+                satuIntent.putExtra("name","barang penemuan 1");
 
 
                 startActivity(satuIntent);
@@ -65,7 +65,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 Intent duaIntent = new Intent(MainActivity.this, DetailsActivity.class);
 
                 duaIntent.putExtra("dua", duaBio);
-                duaIntent.putExtra("name","barang penemuan");
+                duaIntent.putExtra("name","barang penemuan 2");
 
                 startActivity(duaIntent);
 
