@@ -32,13 +32,15 @@ public class DetailsActivity extends AppCompatActivity {
         }
     }
     public void showDetails(String nName){
-        Toast.makeText(this, nName, Toast.LENGTH_LONG).show();
+       Toast.makeText(this, nName, Toast.LENGTH_LONG).show();
 
-        if (nName.equals("satu")){
+        if (nName.equals("barang penemuan")){
             profileImage.setImageDrawable(getResources().getDrawable(R.drawable.satu));
-            textBio.setText(extras.getString("satu"));
-        }else if (nName=="dua"){
-            profileImage.setImageResource(R.drawable.dua);
+            textBio.setText(extras.getString("s"));
+
+        }else if (nName.equals("barang penemuan")){
+
+            profileImage.setImageDrawable(getResources().getDrawable(R.drawable.dua));
             textBio.setText(extras.getString("dua"));
         }
     }

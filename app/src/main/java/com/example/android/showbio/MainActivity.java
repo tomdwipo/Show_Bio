@@ -53,7 +53,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         switch (v.getId()){
             case R.id.gambarSatu:
                 Intent satuIntent = new Intent(MainActivity.this, DetailsActivity.class);
-                satuIntent.putExtra("satu",satuBio);
+                satuIntent.putExtra("s",satuBio);
                 satuIntent.putExtra("name","barang penemuan");
 
 
