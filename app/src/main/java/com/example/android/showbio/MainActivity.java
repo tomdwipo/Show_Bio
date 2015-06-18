@@ -17,6 +17,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private String duaBio = "Ditemukan KTM di perpustakan dengan nama yang sesuai pada kartu pengenalnya di kantin pusat";
     private Button posisiList;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +30,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         gambarSatu.setOnClickListener(this);
         gambarDua.setOnClickListener(this);
         posisiList.setOnClickListener(this);
+
     }
 
     @Override

@@ -51,6 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <ImageView
+        android:id="@+id/image"
         android:src="@android:drawable/ic_media_play"
         android:layout_below="@+id/pages"
         android:layout_marginRight="10dp"
