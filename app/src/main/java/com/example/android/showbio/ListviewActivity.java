@@ -34,7 +34,7 @@ public class ListviewActivity extends Activity {
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     int intPosition = position;
                     String Click = listview.getItemAtPosition(intPosition).toString();
-                    Toast.makeText(getApplicationContext(),intPosition,Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),Click,Toast.LENGTH_LONG).show();
                 }
             });
 
