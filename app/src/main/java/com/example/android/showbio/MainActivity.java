@@ -16,6 +16,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             "serta NRP sebagai berikut, ditemukan di perpustakaan";
     private String duaBio = "Ditemukan KTM di perpustakan dengan nama yang sesuai pada kartu pengenalnya di kantin pusat";
     private Button posisiList;
+    private Button listview22;
 
 
     @Override
@@ -25,11 +26,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
         gambarSatu = (ImageView)findViewById(R.id.gambarSatu);
         gambarDua = (ImageView)findViewById(R.id.gambarDua);
         posisiList = (Button)findViewById(R.id.posisiList);
+        listview22 = (Button)findViewById(R.id.Listview22);
 
 
         gambarSatu.setOnClickListener(this);
         gambarDua.setOnClickListener(this);
         posisiList.setOnClickListener(this);
+        listview22.setOnClickListener(this);
 
     }
 
@@ -81,6 +84,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 Intent intent = new Intent(MainActivity.this, ListviewActivity.class);
                 intent.putExtra("listview","barang");
                 startActivity(intent);
+                break;
+            case R.id.Listview22:
+                Intent intent1 = new Intent(MainActivity.this, Listview2Activity.class);
+                intent1.putExtra("list2","list");
+                startActivity(intent1);
                 break;
 
         }

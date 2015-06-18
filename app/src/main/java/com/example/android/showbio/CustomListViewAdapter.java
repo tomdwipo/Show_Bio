@@ -32,7 +32,7 @@ public class CustomListViewAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 0;
+        return books.size();
     }
 
     @Override

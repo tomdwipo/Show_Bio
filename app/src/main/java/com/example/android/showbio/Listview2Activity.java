@@ -69,6 +69,7 @@ public class Listview2Activity extends AppCompatActivity {
         }
         listView = (ListView)findViewById(R.id.listview2);
         customListViewAdapter = new CustomListViewAdapter(getApplicationContext(),authorlist);
+        listView.setAdapter(customListViewAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

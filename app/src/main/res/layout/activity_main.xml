@@ -48,6 +48,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/posisiList"
-        android:text="listView"/>
+        android:text="listView"
+        android:layout_below="@+id/gambarSatu"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Listview22"
+        android:text="listView2"
+        android:layout_below="@+id/gambarSatu"
+        android:layout_alignParentRight="true"/>
 
 </RelativeLayout>
