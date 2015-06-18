@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends Activity implements View.OnClickListener {
@@ -14,6 +15,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private String satuBio = "Ditemukan Kartu Tanda Mahasiswa dengan nama yang sesuai pada kartu pengenelanya" +
             "serta NRP sebagai berikut, ditemukan di perpustakaan";
     private String duaBio = "Ditemukan KTM di perpustakan dengan nama yang sesuai pada kartu pengenalnya di kantin pusat";
+    private Button posisiList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +23,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_main);
         gambarSatu = (ImageView)findViewById(R.id.gambarSatu);
         gambarDua = (ImageView)findViewById(R.id.gambarDua);
+        posisiList = (Button)findViewById(R.id.posisiList);
+
 
         gambarSatu.setOnClickListener(this);
         gambarDua.setOnClickListener(this);
+        posisiList.setOnClickListener(this);
     }
 
     @Override
@@ -70,6 +75,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 startActivity(duaIntent);
 
                 break;
+            case R.id.posisiList:
+                Intent intent = new Intent(MainActivity.this, ListviewActivity.class);
+                intent.putExtra("listview","barang");
+                startActivity(intent);
+                break;
+
         }
 
     }

@@ -44,5 +44,10 @@
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/ditemukanSatu"
         android:layout_alignStart="@+id/ditemukanSatu" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/posisiList"
+        android:text="listView"/>
 
 </RelativeLayout>
