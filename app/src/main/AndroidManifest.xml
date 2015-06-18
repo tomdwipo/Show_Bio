@@ -24,6 +24,10 @@
             android:name=".ListviewActivity"
             android:label="@string/title_activity_listview" >
         </activity>
+        <activity
+            android:name=".Listview2Activity"
+            android:label="@string/title_activity_listview2" >
+        </activity>
     </application>
 
 </manifest>
