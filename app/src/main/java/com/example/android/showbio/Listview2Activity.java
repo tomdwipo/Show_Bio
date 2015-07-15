@@ -58,6 +58,10 @@ public class Listview2Activity extends AppCompatActivity {
                 "90 pages",
                 "100 pages"
         };
+        final Integer[] gambar = new Integer[]{
+          R.mipmap.ic_launcher,R.drawable.satu,R.drawable.dua,R.drawable.satu,R.drawable.dua,R.drawable.satu,R.drawable.dua,R.drawable.satu,
+                R.drawable.dua,R.drawable.satu
+        };
         ArrayList<HashMap<String, String>> authorlist = new ArrayList<>();
         for (int i = 0; i<10; i++){
             HashMap<String,String> data = new HashMap<>();
@@ -67,8 +71,15 @@ public class Listview2Activity extends AppCompatActivity {
 
             authorlist.add(data);
         }
+        ArrayList<HashMap<String, Integer>> authorlis = new ArrayList<>();
+        for (int i = 0; i<10; i++){
+            HashMap<String, Integer> data1 = new HashMap<>();
+           data1.put("Image", gambar[i]);
+
+            authorlis.add(data1);
+        }
         listView = (ListView)findViewById(R.id.listview2);
-        customListViewAdapter = new CustomListViewAdapter(getApplicationContext(),authorlist);
+        customListViewAdapter = new CustomListViewAdapter(getApplicationContext(),authorlist,authorlis);
         listView.setAdapter(customListViewAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

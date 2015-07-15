@@ -18,13 +18,15 @@ public class CustomListViewAdapter extends BaseAdapter {
 
     private Context mContext;
     private ArrayList<HashMap<String, String>> books;
+    private ArrayList<HashMap<String,Integer>> data1;
     private static LayoutInflater inflater = null;
 
 
 
-    public CustomListViewAdapter(Context context, ArrayList<HashMap<String, String>> data){
+    public CustomListViewAdapter(Context context, ArrayList<HashMap<String, String>> data, ArrayList<HashMap<String,Integer>> data11){
         mContext = context;
         books = data;
+        data1 = data11;
         inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
 
@@ -61,8 +63,12 @@ public class CustomListViewAdapter extends BaseAdapter {
             title.setText(mBook.get("title"));
             author.setText(mBook.get("author"));
             pages.setText(mBook.get("pages"));
-            image.setImageDrawable(mContext.getResources().getDrawable(R.mipmap.ic_launcher));
+           // image.setImageDrawable(mContext.getResources().getDrawable(R.mipmap.ic_launcher));
+           HashMap<String,Integer> mdata1 = new HashMap<>();
+            mdata1 = data1.get(position);
+            image.setImageResource(mdata1.get("Image"));
         }
+
 
         return view;
     }
